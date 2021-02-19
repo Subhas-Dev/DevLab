@@ -133,5 +133,17 @@ namespace CSharp_Lab
 
             }
         }
+
+        public static void PreviewEmployee(List<Employee> employees, IsPromotable isEligibleToPromote)
+        {
+            foreach (Employee emp in employees)
+            {
+                if (!isEligibleToPromote(emp))
+                {
+                    Console.WriteLine(emp.EmpName + " under review");
+                }
+
+            }
+        }
     }
 }
